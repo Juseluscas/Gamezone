@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+    <h1>SEJA BEM VINDO AO GAMER ZONE</h1>
+    <p>Aqui vc irá jogar os games da Academia7 de programação</p>
+
+    <form action="/" method="POST">
+        {% csrf_token %}
+        <label for="username">User: </label>
+        <input name="username" type="text">
+
+        <label for="senha">password: </label>
+        <input name="senha" type="password">
+
+        <input type="submit" value="JOGAR">
+
+    </form>
+
+    <p>Não tem cadastro?</p>
+    <p> <a href="gamezone/cadastro">Clique aqui meu consagrado</a></p>
+
+
+{% endblock %}

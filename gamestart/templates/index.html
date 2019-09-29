@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+    <h1>CADASTRE-SE É DE GRAÇA</h1>
+    <p>Aqui vc irá jogar os games da Academia7 de programação</p>
+    <p><a href=""></a></p>
+    <p>{{logado}}</p>
+
+    <form action="/gamezone/cadastro" method="POST">
+        {% csrf_token %}
+        <label for="username">username: </label>
+        <input name="username" type="text">
+
+        <label for="senha">password: </label>
+        <input name="senha" type="password">
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+{% endblock %}
