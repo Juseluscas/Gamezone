@@ -26,7 +26,7 @@ SECRET_KEY = '9!suyi6rocv6z1_u^_1y&wwa33ui9c5qgu&#m!z80c46q72e89'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [localhost , gamezone.herokuapp.com]
+ALLOWED_HOSTS = ['localhost', 'gamezone.herokuapp.com']
 
 
 # Application definition
