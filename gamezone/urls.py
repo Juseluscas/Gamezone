@@ -20,5 +20,7 @@ from gamestart import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.login),
-    path('gamezone/cadatro', views.cadastro),
+    path('gamezone/cadastro', views.cadastro),
+    path('gamezone/velha' , views.velha),
+    path('gamezone/teste', views.Login)
 ]

@@ -14,23 +14,29 @@ def cadastro (request):
         args = {
             'logado': 'Você conseguiu logar!, agora vai se divertir com o jogos da Academia7'
         }
+    return render(request, 'index.html')
 
 def login(request):
     if request.method == "POST":
         formulario_username = request.POST['username']
         formulario_senha = request.POST['senha']
-        
-    return render(request, 'login.html')
-        # usuario_logado = Login.objects.filter(usuario__username = formulario_username,
-        #                                       usuario__senha = formulario_senha).first()
 
-        # if usuario_logado is not None:
-        #         args = {
-        #             'dados': usuario_logado
-        #         }
-        #         return render(request, 'teste.html', args)
-        # else:
-        #         args = {
-        #             'msg': 'Noooooosssa, credenciais inválidas'
-        #         }
-        #         return render(request, 'login.html', args)
+        username_logado = Login.objects.filter(username__username = formulario_username).first()
+                                            #    username__senha = formulario_senha).first()
+                        
+        
+        if username_logado is not None:
+            args = {
+                'dados': username_logado
+            }
+            return render(request, 'teste.html', args)
+        else:
+            args = {
+                'msg': 'Noooooosssa, credenciais inválidas'
+            }
+            return render(request, 'login.html', args)
+
+    return render(request, 'login.html')
+
+def velha(request):
+    return render(request, 'velha.html')

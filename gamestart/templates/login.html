@@ -4,6 +4,7 @@
 
     <h1>SEJA BEM VINDO AO GAMER ZONE</h1>
     <p>Aqui vc irá jogar os games da Academia7 de programação</p>
+    <h2>{{msg}}</h2>
 
     <form action="/" method="POST">
         {% csrf_token %}
@@ -19,6 +20,8 @@
 
     <p>Não tem cadastro?</p>
     <p> <a href="gamezone/cadastro">Clique aqui meu consagrado</a></p>
+    <p>Demonstração de um game ? Clique abaixo</p>
+    <p><a href="gamezone/velha">Jogo da velha</a></p>
 
 
 {% endblock %}
